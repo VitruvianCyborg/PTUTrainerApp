@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.88">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.33072916" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <TextView
+                    android:id="@+id/Hit_Points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Hit Points:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/Button_Minus_Hit_Points"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="-"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Hit_Points"
+                    app:layout_constraintEnd_toStartOf="@+id/Hit_Points_Current_Number"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Hit_Points" />
+
+                <TextView
+                    android:id="@+id/Hit_Points_Current_Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="3"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Button_Minus_Hit_Points"
+                    app:layout_constraintEnd_toStartOf="@+id/Slash"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Button_Minus_Hit_Points" />
+
+                <TextView
+                    android:id="@+id/Slash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Hit_Points_Current_Number"
+                    app:layout_constraintEnd_toStartOf="@+id/Hit_Points_Max_Number"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Hit_Points_Current_Number" />
+
+                <TextView
+                    android:id="@+id/Hit_Points_Max_Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="3"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Slash"
+                    app:layout_constraintEnd_toStartOf="@+id/Button_Plus_Hit_Points"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Slash" />
+
+
+                <Button
+                    android:id="@+id/Button_Plus_Hit_Points"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Hit_Points_Max_Number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Hit_Points_Max_Number" />
+
+
+                <TextView
+                    android:id="@+id/Overland"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Overland Spd:"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/Overland_Number"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Button_Minus_Hit_Points" />
+
+                <TextView
+                    android:id="@+id/Overland_Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Overland"
+                    app:layout_constraintEnd_toStartOf="@+id/Swim"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Overland" />
+
+                <TextView
+                    android:id="@+id/Swim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Swim Spd:"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Overland_Number"
+                    app:layout_constraintEnd_toStartOf="@+id/Swim_Number"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Overland_Number" />
+
+                <TextView
+                    android:id="@+id/Swim_Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Swim"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Swim" />
+
+                <TextView
+                    android:id="@+id/Phy_Eva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Phy Eva:"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/Phy_Eva_Number"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Overland" />
+
+                <TextView
+                    android:id="@+id/Phy_Eva_Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Phy_Eva"
+                    app:layout_constraintEnd_toStartOf="@+id/Sp_Eva"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Phy_Eva" />
+
+                <TextView
+                    android:id="@+id/Sp_Eva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spc Eva:"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Phy_Eva_Number"
+                    app:layout_constraintEnd_toStartOf="@+id/Sp_Eva_Number"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Phy_Eva_Number" />
+
+                <TextView
+                    android:id="@+id/Sp_Eva_Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Sp_Eva"
+                    app:layout_constraintEnd_toStartOf="@+id/Speed_Eva"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Sp_Eva" />
+
+                <TextView
+                    android:id="@+id/Speed_Eva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spd Eva:"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Sp_Eva_Number"
+                    app:layout_constraintEnd_toStartOf="@+id/Speed_Eva_Number"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Sp_Eva_Number" />
+
+                <TextView
+                    android:id="@+id/Speed_Eva_Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Speed_Eva"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Speed_Eva" />
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/Stats"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:background="#000000"
+                    android:fontFamily="@font/orator_std"
+                    android:text="STATS"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="36sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Phy_Eva" />
+
+                <TextView
+                    android:id="@+id/HP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="HP:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Stats" />
+
+                <TextView
+                    android:id="@+id/HP_Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:maxLength="2"
+                    android:selectAllOnFocus="true"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/HP"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_center" />
+
+                <TextView
+                    android:id="@+id/Atk"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Attack:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/HP" />
+
+                <TextView
+                    android:id="@+id/Atk_Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:selectAllOnFocus="true"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Atk"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_center" />
+
+                <TextView
+                    android:id="@+id/Def"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Defence:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Atk" />
+
+                <TextView
+                    android:id="@+id/Def_Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:maxLength="2"
+                    android:selectAllOnFocus="true"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Def"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_center" />
+
+                <TextView
+                    android:id="@+id/SpAtk"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Special Atk:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Def" />
+
+                <TextView
+                    android:id="@+id/SpAtk_Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:maxLength="2"
+                    android:selectAllOnFocus="true"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/SpAtk"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_center" />
+
+                <TextView
+                    android:id="@+id/SpDef"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Special Def:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/SpAtk" />
+
+                <TextView
+                    android:id="@+id/SpDef_Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:maxLength="2"
+                    android:selectAllOnFocus="true"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/SpDef"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_center" />
+
+                <TextView
+                    android:id="@+id/Spd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Speed:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/SpDef" />
+
+                <TextView
+                    android:id="@+id/Spd_Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:maxLength="2"
+                    android:selectAllOnFocus="true"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Spd"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_center" />
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/Combat_Stages"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:background="#000000"
+                    android:fontFamily="@font/orator_std"
+                    android:text="COMBAT\nSTAGES"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="36sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_center"
+                    app:layout_constraintTop_toBottomOf="@+id/Phy_Eva" />
+
+                <Button
+                    android:id="@+id/Button_Plus_Atk"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Atk_CS"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Atk_CS" />
+
+                <TextView
+                    android:id="@+id/Atk_CS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="2"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Button_Minus_Atk"
+                    app:layout_constraintEnd_toStartOf="@+id/Button_Plus_Atk"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Button_Minus_Atk" />
+
+                <Button
+                    android:id="@+id/Button_Minus_Atk"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Atk_Number"
+                    app:layout_constraintEnd_toStartOf="@+id/Atk_CS"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/guideline_center" />
+
+                <Button
+                    android:id="@+id/Button_Plus_Def"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Def_CS"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Def_CS" />
+
+                <TextView
+                    android:id="@+id/Def_CS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="2"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Button_Minus_Def"
+                    app:layout_constraintEnd_toStartOf="@+id/Button_Plus_Def"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Button_Minus_Def" />
+
+                <Button
+                    android:id="@+id/Button_Minus_Def"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Def_Number"
+                    app:layout_constraintEnd_toStartOf="@+id/Def_CS"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/guideline_center" />
+
+                <Button
+                    android:id="@+id/Button_Plus_SpAtk"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/SpAtk_CS"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/SpAtk_CS" />
+
+                <TextView
+                    android:id="@+id/SpAtk_CS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="2"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Button_Minus_SpAtk"
+                    app:layout_constraintEnd_toStartOf="@+id/Button_Plus_SpAtk"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Button_Minus_SpAtk" />
+
+                <Button
+                    android:id="@+id/Button_Minus_SpAtk"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/SpAtk_Number"
+                    app:layout_constraintEnd_toStartOf="@+id/SpAtk_CS"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/guideline_center" />
+
+                <Button
+                    android:id="@+id/Button_Plus_SpDef"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/SpDef_CS"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/SpDef_CS" />
+
+                <TextView
+                    android:id="@+id/SpDef_CS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="2"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Button_Minus_SpDef"
+                    app:layout_constraintEnd_toStartOf="@+id/Button_Plus_SpDef"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Button_Minus_SpDef" />
+
+                <Button
+                    android:id="@+id/Button_Minus_SpDef"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/SpDef_Number"
+                    app:layout_constraintEnd_toStartOf="@+id/SpDef_CS"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/guideline_center" />
+
+                <Button
+                    android:id="@+id/Button_Plus_Speed"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Speed_CS"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Speed_CS" />
+
+                <TextView
+                    android:id="@+id/Speed_CS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="2"
+                    android:text="0"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Button_Minus_Speed"
+                    app:layout_constraintEnd_toStartOf="@+id/Button_Plus_Speed"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Button_Minus_Speed" />
+
+                <Button
+                    android:id="@+id/Button_Minus_Speed"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/Spd_Number"
+                    app:layout_constraintEnd_toStartOf="@+id/Speed_CS"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/guideline_center" />
+
+
+
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginTop="2dp">
+
+            <Button
+                android:id="@+id/Button_Phys_Att"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/orator_std"
+                android:text="Phys. Attributes"
+                android:layout_margin="2dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp">
+
+            <Button
+                android:id="@+id/Button_Status_Effects"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/orator_std"
+                android:text="Status Effects"
+                android:layout_margin="2dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+

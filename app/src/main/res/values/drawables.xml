@@ -1,0 +1,27 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <drawable name="launcher">@drawable/ic_launcher_pokeball_red</drawable>
+    <drawable name="menuTrainer">@drawable/ic_menu_pokedex</drawable>
+
+    <drawable name="menuPokeDefault">@drawable/ic_menu_pokeball</drawable>
+
+    <drawable name="menuPokeBug">@drawable/ic_menu_type_bug</drawable>
+    <drawable name="menuPokeDark">@drawable/ic_menu_type_dark</drawable>
+    <drawable name="menuPokeDragon">@drawable/ic_menu_type_dragon</drawable>
+    <drawable name="menuPokeElectric">@drawable/ic_menu_type_electric</drawable>
+    <drawable name="menuPokeFairy">@drawable/ic_menu_type_fairy</drawable>
+    <drawable name="menuPokeFighting">@drawable/ic_menu_type_fighting</drawable>
+    <drawable name="menuPokeFire">@drawable/ic_menu_type_fire</drawable>
+    <drawable name="menuPokeFlying">@drawable/ic_menu_type_flying</drawable>
+    <drawable name="menuPokeGhost">@drawable/ic_menu_type_ghost</drawable>
+    <drawable name="menuPokeGrass">@drawable/ic_menu_type_grass</drawable>
+    <drawable name="menuPokeGround">@drawable/ic_menu_type_ground</drawable>
+    <drawable name="menuPokeIce">@drawable/ic_menu_type_ice</drawable>
+    <drawable name="menuPokeNormal">@drawable/ic_menu_type_normal</drawable>
+    <drawable name="menuPokePoison">@drawable/ic_menu_type_poison</drawable>
+    <drawable name="menuPokePsychic">@drawable/ic_menu_type_psychic</drawable>
+    <drawable name="menuPokeRock">@drawable/ic_menu_type_rock</drawable>
+    <drawable name="menuPokeSteel">@drawable/ic_menu_type_steel</drawable>
+    <drawable name="menuPokeWater">@drawable/ic_menu_type_water</drawable>
+
+</resources>

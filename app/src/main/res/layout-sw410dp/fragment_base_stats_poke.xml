@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.83" />
+
+        <EditText
+            android:id="@+id/Pokemon_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/orator_std"
+            android:hint="Pokémon Name"
+            android:inputType="textCapWords"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Lvl"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Lvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Level:"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Pokemon_Name"
+            app:layout_constraintEnd_toStartOf="@+id/Lvl_Number"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Pokemon_Name" />
+
+        <EditText
+            android:id="@+id/Lvl_Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="3"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Lvl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Lvl" />
+
+        <TextView
+            android:id="@+id/Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Type:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/Type_Spinner"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Pokemon_Name" />
+
+        <Spinner
+            android:id="@+id/Type_Spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Type"
+            app:layout_constraintTop_toBottomOf="@+id/Pokemon_Name" />
+
+        <TextView
+            android:id="@+id/Overland"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Overland:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/Overland_Number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Type_Spinner" />
+
+        <EditText
+            android:id="@+id/Overland_Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Overland"
+            app:layout_constraintEnd_toStartOf="@+id/Swim"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Overland" />
+
+        <TextView
+            android:id="@+id/Swim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Swim:"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Overland"
+            app:layout_constraintEnd_toStartOf="@+id/Swim_Number"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Overland_Number" />
+
+        <EditText
+            android:id="@+id/Swim_Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Overland"
+            app:layout_constraintEnd_toStartOf="@+id/Weight_Class"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Swim" />
+
+        <TextView
+            android:id="@+id/Weight_Class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Weight Class:"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Swim"
+            app:layout_constraintEnd_toStartOf="@+id/Weight_Class_Number"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Swim_Number" />
+
+        <EditText
+            android:id="@+id/Weight_Class_Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="1"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Weight_Class"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Weight_Class" />
+
+
+        <TextView
+            android:id="@+id/Stats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:background="#000000"
+            android:fontFamily="@font/orator_std"
+            android:text="STATS"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Weight_Class" />
+
+        <TextView
+            android:id="@+id/HP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="HP:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Stats" />
+
+        <EditText
+            android:id="@+id/HP_Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBaseline_toBaselineOf="@+id/HP"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_center"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left" />
+
+        <TextView
+            android:id="@+id/Atk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Attack:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HP" />
+
+        <EditText
+            android:id="@+id/Atk_Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Atk"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_center"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left" />
+
+        <TextView
+            android:id="@+id/Def"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Defence:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Atk" />
+
+        <EditText
+            android:id="@+id/Def_Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Def"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_center"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left" />
+
+        <TextView
+            android:id="@+id/SpAtk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Special Atk:"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/HP"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.291"
+            app:layout_constraintStart_toStartOf="@+id/guideline_center" />
+
+        <EditText
+            android:id="@+id/SpAtk_Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBaseline_toBaselineOf="@+id/SpAtk"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_right" />
+
+        <TextView
+            android:id="@+id/SpDef"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Special Def:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintStart_toStartOf="@+id/guideline_center"
+            app:layout_constraintTop_toBottomOf="@+id/SpAtk" />
+
+        <EditText
+            android:id="@+id/SpDef_Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBaseline_toBaselineOf="@+id/SpDef"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_right" />
+
+        <TextView
+            android:id="@+id/Spd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Speed:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintStart_toStartOf="@+id/guideline_center"
+            app:layout_constraintTop_toBottomOf="@+id/SpDef" />
+
+        <EditText
+            android:id="@+id/Spd_Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Spd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_right" />
+
+        <Button
+            android:id="@+id/save"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/orator_std"
+            android:text="SAVE"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Def_Number" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

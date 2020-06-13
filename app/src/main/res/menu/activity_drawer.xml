@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Trainer">
+        <menu>
+            <item
+                android:id="@+id/Trainer"
+                android:icon="@drawable/menuTrainer"
+                android:title="Trainer" />
+        </menu>
+    </item>
+
+    <item android:title="Pokémon">
+        <menu>
+            <item
+                android:id="@+id/Poke_1"
+                android:icon="@drawable/menuPokeDefault"
+                android:title="Pokémon 1" />
+            <item
+                android:id="@+id/Poke_2"
+                android:icon="@drawable/menuPokeDefault"
+                android:title="Pokémon 2" />
+            <item
+                android:id="@+id/Poke_3"
+                android:icon="@drawable/menuPokeDefault"
+                android:title="Pokémon 3" />
+            <item
+                android:id="@+id/Poke_4"
+                android:icon="@drawable/menuPokeDefault"
+                android:title="Pokémon 4" />
+            <item
+                android:id="@+id/Poke_5"
+                android:icon="@drawable/menuPokeDefault"
+                android:title="Pokémon 5" />
+        </menu>
+    </item>
+
+</menu>

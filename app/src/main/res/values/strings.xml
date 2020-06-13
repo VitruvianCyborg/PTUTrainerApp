@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">PTU-Trainer-App</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="activityID">activityID</string>
+    <string name="unqiueID">uniqueID</string>
+
+    <string name="trainerCS">trainerCS</string>
+    <string name="poke1CS">poke1CS</string>
+    <string name="poke2CS">poke2CS</string>
+    <string name="poke3CS">poke3CS</string>
+    <string name="poke4CS">poke4CS</string>
+    <string name="poke5CS">poke5CS</string>
+
+    <string name="trainerName">trainerName</string>
+
+    <string name="poke1Name">poke1Name</string>
+    <string name="poke2Name">poke2Name</string>
+    <string name="poke3Name">poke3Name</string>
+    <string name="poke4Name">poke4Name</string>
+    <string name="poke5Name">poke5Name</string>
+    <string name="poke6Name">poke6Name</string>
+
+    <string name="baseHP">baseHP</string>
+    <string name="baseAtk">baseAtk</string>
+    <string name="baseDef">baseDef</string>
+    <string name="baseSpAtk">baseSpAtk</string>
+    <string name="baseSpDef">baseSpDef</string>
+    <string name="baseSpeed">baseSpeed</string>
+    <string name="baseHeightFeet">baseHeightFeet</string>
+    <string name="baseHeightInches">baseHeightInches</string>
+    <string name="baseWeight">baseWeight</string>
+    <string name="baseAcro">baseAcro</string>
+    <string name="baseAth">baseAth</string>
+    <string name="baseComb">baseComb</string>
+    <string name="baseIntim">baseIntim</string>
+    <string name="baseStlth">baseStlth</string>
+    <string name="baseSurv">baseSurv</string>
+    <string name="baseGenEd">baseGenEd</string>
+    <string name="baseMedEd">baseMedEd</string>
+    <string name="baseOccEd">baseOccEd</string>
+    <string name="basePokeEd">basePokeEd</string>
+    <string name="baseTechEd">baseTechEd</string>
+    <string name="baseGuile">baseGuile</string>
+    <string name="basePerc">basePerc</string>
+    <string name="baseCharm">baseCharm</string>
+    <string name="baseComm">baseComm</string>
+    <string name="baseFoc">baseFoc</string>
+    <string name="baseIntuit">baseIntuit</string>
+    <string name="baseWeightClass">baseIntuit</string>
+
+
+    <string name="currentHP">currentHP</string>
+    <string name="currentAtk">currentAtk</string>
+    <string name="currentDef">currentDef</string>
+    <string name="currentSpAtk">currentSpAtk</string>
+    <string name="currentSpDef">currentSpDef</string>
+    <string name="currentSpeed">currentSpeed</string>
+    <string name="currentAcro">currentAcro</string>
+    <string name="currentAth">currentAth</string>
+    <string name="currentComb">currentComb</string>
+    <string name="currentIntim">currentIntim</string>
+    <string name="currentStlth">currentStlth</string>
+    <string name="currentSurv">currentSurv</string>
+    <string name="currentGenEd">currentGenEd</string>
+    <string name="currentMedEd">currentMedEd</string>
+    <string name="currentOccEd">currentOccEd</string>
+    <string name="currentPokeEd">currentPokeEd</string>
+    <string name="currentTechEd">currentTechEd</string>
+    <string name="currentGuile">currentGuile</string>
+    <string name="currentPerc">currentPerc</string>
+    <string name="currentCharm">currentCharm</string>
+    <string name="currentComm">currentComm</string>
+    <string name="currentFoc">currentFoc</string>
+    <string name="currentIntuit">currentIntuit</string>
+
+    <string-array name="pokeType_array">
+        <item>Bug</item>
+        <item>Dark</item>
+        <item>Dragon</item>
+        <item>Electric</item>
+        <item>Fairy</item>
+        <item>Fighting</item>
+        <item>Fire</item>
+        <item>Flying</item>
+        <item>Ghost</item>
+        <item>Grass</item>
+        <item>Ground</item>
+        <item>Ice</item>
+        <item>Normal</item>
+        <item>Poison</item>
+        <item>Psychic</item>
+        <item>Rock</item>
+        <item>Steel</item>
+        <item>Water</item>
+    </string-array>
+
+    <string name="dialog_Status_Title">Status Effects</string>
+    <string name="dialog_Training_Title">Training &amp; Orders</string>
+    <string name="title_activity_dialog_training">DialogTraining</string>
+</resources>
